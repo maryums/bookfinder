@@ -1,23 +1,55 @@
-import logo from './logo.svg';
-import './App.css';
+import React from "react";
+import { Routes, Route, Link } from 'react-router-dom';
+import Form from "./components/Form";
+import UserReviews from './components/UserReviews'
+import BooksPage from './components/BooksPage'
+import { MdRateReview } from 'react-icons/md';
+
 
 function App() {
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
+
+      <div className="wrapper">
+        <header>
+          <Link to="/">
+            <h1 className="heading">
+              athenaeum book finder</h1>
+          </Link>
+
+          <div className="about-container">
+            <p>
+              It's overwhelming to start on a new book sometimes. The athenaeum app helps you search, rate and read reviews other users have left for books!
+            </p>
+            <p>
+              So go ahead, search and find a new book & leave a review if you've read it!
+            </p>
+            <div className="header-link-container">
+              <p>
+                <Link to="/reviews">  See all user submitted reviews  <MdRateReview /> </Link>
+              </p>
+            </div>
+          </div>
+        </header>
+
+        <Routes>
+          <Route path="/" element={<Form />} />
+          <Route path="/books" element={<BooksPage />} />
+          <Route path="/reviews" element={<UserReviews />} />
+        </Routes>
+      </div>
+
+      <footer>
         <p>
-          Edit <code>src/App.js</code> and save to reload.
+          Built by Maryum Siddiqui
         </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+        <p>
+          Data provided by Google Books APIs
+
+        </p>
+
+      </footer>
+
     </div>
   );
 }

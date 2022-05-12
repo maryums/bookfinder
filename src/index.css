@@ -1,13 +1,390 @@
-body {
-  margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+@import url('https://fonts.googleapis.com/css2?family=Montserrat+Alternates:wght@300&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Cookie&display=swap');
+
+
+/* http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+
+/* Variables */
+:root {
+	/* Fonts */
+	--body-font: 'Montserrat Alternates', sans-serif;
+	/* Colours */
+	--main-bg-color: #202224;
+	--section-bg-color: #dbdee2;
+	--accent-color: #b4aac6;
+	--dark-accent-color: #453275;
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+body {
+	line-height: 1;
+}
+ol, ul {
+	list-style: none;
+}
+blockquote, q {
+	quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
+}
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+
+/* library photo by Tim van Cleef on Unsplash */ 
+
+body {
+	font-family: 'Montserrat Alternates', sans-serif;
+  	font-size: 1.2rem;
+	line-height: 1.3;
+	flex-direction: column; 
+    justify-content: space-between;
+    background-color: var(--main-bg-color);
+    background: url(../src/assets/library.jpeg);
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+
+.about-container {
+    text-align: center;
+}
+
+header, .form-container, .book-container, .review-page {
+	background-color: var(--section-bg-color);opacity:0.8; 
+	padding: 25px 60px 40px; 
+	margin-top: 50px;
+	border-radius: 10px;
+}
+
+.wrapper {
+	width: 70%; 
+	max-width: 1200px; 
+	margin: 0 auto; 
+}
+
+header a:link, a:visited  {
+    text-decoration: none;
+    color: black;    
+}
+
+.heading {
+	font-size: 5rem;
+	font-family: 'Cookie', cursive;
+	text-align: center;
+}
+
+.quote {
+	font-family: 'Cookie', cursive;
+	text-align: center;
+    font-size: 1.4rem;
+}
+
+.search {
+    display: flex;
+    justify-content: center;
+    align-items:center;
+}
+
+.review-form input {
+        width: 100%;
+        padding: 12px 20px;
+        margin: 8px 0;
+        box-sizing: border-box;
+        font-size: 1.4;
+        font-family: 'Montserrat Alternates', sans-serif;
+        border-top-left-radius:4px;
+        border-bottom-left-radius:4px;
+        border: none;
+}
+
+.review-form {
+    color: white;
+	border: 1px solid var(--main-bg-color);
+	padding: 40px 50px 50px; 
+	margin-top: 50px;
+}
+
+.review-form button {
+    width: 100%;
+    outline: none;
+    border: none;
+    border-radius: 5px;
+    background-color: #24a0ed;
+    color: white;
+    font-weight: bold;
+    padding: 0.3rem 0.5rem;
+}
+
+.review-instructions {
+    color: white;
+    margin: 0; 
+	margin-bottom: 10px;
+	font-weight: 600;
+    text-align: center;
+}
+
+.reviews-container {
+    display: flex;
+	flex-wrap: wrap; 
+	justify-content: space-around;
+	margin-top: 40px;
+}
+
+.reviews-container div {
+	border: 1px solid var(--main-bg-color);
+	padding: 10px 40px; 
+	width: 45%;
+	margin-bottom: 40px;
+}
+
+.reviews-container div h3 {
+	font-size: 2rem;
+}
+
+.reviews-container a {
+	transition: 0.3s; 
+}
+
+.reviews-container a:hover {
+	border-bottom: 2px solid transparent;
+    color: var(--accent-color);
+}
+
+.review-error {
+    color: black;
+	margin-bottom: 0;
+	margin-top: 30px;
+	text-align: center; 
+    background-color: var(--section-bg-color); 
+    border-radius: 4px;
+}
+
+.reviews-link-container {
+    color: white;
+    display: flex;
+	flex-direction: row;
+	justify-content: center; 
+}
+
+.header-link-container {
+    display: flex;
+	flex-direction: row;
+	justify-content: center; 
+    margin: 20px 0;
+
+}
+
+.reviews-link-container a {
+	text-decoration: none;
+	color: white;
+}
+
+.card {
+    background-color: white;
+    border-radius: 1rem;
+    padding: 0.5rem;
+    margin-bottom: 10px;
+    box-shadow: 0 5px 5px rgba(5, 4, 13, 0.5);
+    transition: .5s;
+    text-align: center;
+    position: relative;
+}
+.card:hover {
+    transform: scale(0.9);
+    background-color: rgba(255,255,255,0.8);
+}
+.card img {
+    border-radius: 1rem 1rem 0 0;
+}
+.card .bottom { 
+    display: flex;
+    flex-direction: column;
+}
+.card .bottom .title{
+    font-size: 1.2rem;
+    margin-bottom: 32px;
+}
+.card .bottom .amount {
+    position: absolute;
+    bottom: 10px;
+    left: 10px;
+    right: 10px;
+    background-color: var(--primary-color);
+    color: var(--secondary-color);
+    font-size: 13px;
+    font-weight: bold;
+    padding: 0.2rem;
+}
+
+.overlay {
+    min-height: 100vh;
+    width: 100%;
+    position: fixed;
+    left: 0;
+    top: 0;
+    bottom: 0;
+    right: 0;
+    background: linear-gradient(rgba(0,0,0,0.2),rgba(0,0,0,0.2));
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.overlay-inner{
+    background: white;
+    width: 700px;
+    height: 550px;
+    padding: 1.5rem;
+    position: relative;
+    box-sizing: border-box;
+    overflow: hidden;
+    font-size: 1.3rem;
+}
+.overlay-inner .close{
+    position: absolute;
+    top:1rem;
+    right: 1rem;
+    outline: none;
+    border: none;
+    font-size: 17px;
+    background-color: transparent;
+}
+.overlay-inner .inner-box{
+    margin-top: 30px;
+    display: flex;
+    justify-content: center;
+}
+.overlay-inner .inner-box img{
+    margin-right: 20px;
+    width: 150px;
+    height: 200px;
+}
+.overlay-inner .inner-box h3{
+    margin-top: 10px;
+    color: --dark-accent-color;
+}
+.overlay-inner .inner-box h4{
+    color: --dark-accent-color;
+}
+.overlay-inner .inner-box button{
+    outline: none;
+    border: none;
+    width: 100px;
+    border-radius: 5px;
+    background-color: #24a0ed;
+    color: white;
+    font-weight: bold;
+    padding: 0.3rem 0.5rem;
+}
+.overlay-inner .description{
+    margin-top: 2rem;
+    text-align: justify;
+    font-size: 13px;
+}
+
+input[type=text] {
+    width: 100%;
+    padding: 12px 20px;
+    margin: 8px 0;
+    box-sizing: border-box;
+    font-size: 1.4;
+    font-family: 'Montserrat Alternates', sans-serif;
+    border-top-left-radius:4px;
+    border-bottom-left-radius:4px;
+    border: none;
+}
+
+input:focus[type=text] {
+    outline: none;
+}
+
+.back-to-homepage {
+    margin: 10px 0;
+}
+
+.search button {
+    padding: 12px 20px;
+    margin: 8px 0;
+    border: none;
+    border-top-right-radius:4px;
+    border-bottom-right-radius:4px;
+    background-color: white;
+}
+
+footer {
+    background-color: black;
+    color: white;
+	display: flex;
+	flex-direction: column; 
+	align-items: center;
+	padding: 10px 0px;
+	margin-top: 45px; 
+}
+
+footer p {
+	font-size: 0.85rem; 
+	margin: 0;
+}
+
+@media (max-width: 650px) {
+	.wrapper {
+		width: 95%;
+	}
+
+	.heading {
+		font-size: 3.5rem;
+		line-height: 1.2;
+	}
+
+	body {
+		font-size: 1.2rem;
+		line-height: 1.3;
+	}
+
+
+	header, .form-container, .book-container, .review-page {
+		padding: 25px 30px 40px; 
+		margin-top: 50px;
+	}
+
+	.review-form {
+		padding: 20px 30px;
+	}
+
+	.reviews-container div {
+		width: 100%;
+	}
 }
