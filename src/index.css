@@ -1,6 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Montserrat+Alternates:wght@300&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Cookie&display=swap');
-
+@import url('https://fonts.googleapis.com/css2?family=Amiri&family=Roboto+Flex:opsz@8..144&display=swap');
 
 /* http://meyerweb.com/eric/tools/css/reset/ 
    v2.0 | 20110126
@@ -66,7 +64,7 @@ table {
 /* library photo by Tim van Cleef on Unsplash */ 
 
 body {
-	font-family: 'Montserrat Alternates', sans-serif;
+    font-family: 'Roboto Flex', sans-serif;
   	font-size: 1.2rem;
 	line-height: 1.3;
 	flex-direction: column; 
@@ -101,13 +99,13 @@ header a:link, a:visited  {
 }
 
 .heading {
-	font-size: 5rem;
-	font-family: 'Cookie', cursive;
+	font-size: 3rem;
+    font-family: 'Amiri', serif;
 	text-align: center;
 }
 
 .quote {
-	font-family: 'Cookie', cursive;
+    font-family: 'Amiri', serif;
 	text-align: center;
     font-size: 1.4rem;
 }
@@ -336,7 +334,7 @@ input:focus[type=text] {
 }
 
 .search button {
-    padding: 12px 20px;
+    padding: 11.2px 20px;
     margin: 8px 0;
     border: none;
     border-top-right-radius:4px;

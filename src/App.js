@@ -6,7 +6,9 @@ import BooksPage from './components/BooksPage'
 import { MdRateReview } from 'react-icons/md';
 
 
+
 function App() {
+
   return (
     <div className="App">
 
@@ -14,7 +16,7 @@ function App() {
         <header>
           <Link to="/">
             <h1 className="heading">
-              athenaeum book finder</h1>
+              athenaeum</h1>
           </Link>
 
           <div className="about-container">

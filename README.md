@@ -11,4 +11,6 @@
 <li> HTML/CSS/Javascript </li>
 <li> Axios </li> 
 <li> <a href="https://developers.google.com/books/docs/v1/using">Google Books APIs</a></li> 
-<br>
+<br> <br>
+
+<a href="https://6280665a151db5639c58e62b--extraordinary-llama-d1605d.netlify.app/"> Live Preview </a>

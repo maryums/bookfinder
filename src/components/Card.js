@@ -5,14 +5,14 @@ const Card = ({ book }) => {
 
     const [show, setShow] = useState(false);
     const [bookItem, setItem] = useState('');
-    console.log(book)
+
 
     return (
         <div>
             {
                 book.map((item) => {
                     let thumbnail = item.volumeInfo.imageLinks && item.volumeInfo.imageLinks.smallThumbnail;
-                    if (thumbnail != undefined) {
+                    if (thumbnail !== undefined) {
                         return (
                             <>
                                 <div className="card"

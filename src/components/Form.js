@@ -1,6 +1,5 @@
-import React, { useState, useEffect, useRef } from 'react'
-import { Navigate, Link, Redirect } from 'react-router-dom';
-import Card from './Card';
+import React, { useState } from 'react'
+import { Link, } from 'react-router-dom';
 import axios from 'axios';
 import { GoSearch } from 'react-icons/go';
 import BooksPage from './BooksPage';
@@ -11,7 +10,7 @@ const Form = () => {
 
     const [bookData, setData] = useState([])
 
-    const API_KEY = //enter API key
+    const API_KEY = //API key goes here
 
     const url = `https://www.googleapis.com/books/v1/volumes?q=${search}&?key=${API_KEY}&maxResults=5`
 
@@ -23,9 +22,13 @@ const Form = () => {
         }
     }
 
+    const handleSearch = (e) => {
+        setData('')
+        setSearch(e.target.value)
+    }
+
     return (
         <div>
-
             <div className="form-container">
 
                 <div className="quote">
@@ -34,11 +37,10 @@ const Form = () => {
 
                 <div className="row2">
 
-
                     <div className="search">
                         <input type="text" placeholder="Enter Your Book Name"
                             value={search}
-                            onChange={e => setSearch(e.target.value)}
+                            onChange={(e) => handleSearch(e)}
                             onKeyPress={searchBook} />
                         <Link to="/books">
                             <button

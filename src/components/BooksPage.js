@@ -1,6 +1,6 @@
-import axios from 'axios';
-import react, { useEffect, useState } from 'react';
-import { Link, useParams } from 'react-router-dom';
+
+import React, { useState } from 'react';
+import { Link } from 'react-router-dom';
 import firebase from '../firebaseConfig';
 import { getDatabase, ref, set } from 'firebase/database';
 import Card from './Card';
@@ -52,9 +52,13 @@ const BooksPage = ({ book }) => {
 
     return (
         <div>
-            {book.length > 1 && <div className="book-container">
-                {<Card book={book} />}
-            </div>}
+            {book.length > 1 &&
+
+                <div className="book-container">
+                    {<Card book={book} />}
+                </div>
+            }
+
 
             <div className="review-form">
                 <h2 className="review-instructions">
