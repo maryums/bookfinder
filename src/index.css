@@ -10,7 +10,7 @@
 	/* Fonts */
 	--body-font: 'Montserrat Alternates', sans-serif;
 	/* Colours */
-	--main-bg-color: #202224;
+	--main-bg-color: #060606;
 	--section-bg-color: #dbdee2;
 	--accent-color: #b4aac6;
 	--dark-accent-color: #453275;
@@ -70,9 +70,9 @@ body {
 	flex-direction: column; 
     justify-content: space-between;
     background-color: var(--main-bg-color);
-    background: url(../src/assets/library.jpeg);
+    /* background: url(../src/assets/library.jpeg);
     background-repeat: no-repeat;
-    background-size: cover;
+    background-size: cover; */
 }
 
 
@@ -107,13 +107,18 @@ header a:link, a:visited  {
 .quote {
     font-family: 'Amiri', serif;
 	text-align: center;
-    font-size: 1.4rem;
+    font-size: .9rem;
 }
 
 .search {
     display: flex;
     justify-content: center;
     align-items:center;
+}
+
+.review-form-item {
+margin: 10px 0;
+font-size: .9rem;
 }
 
 .review-form input {
@@ -136,21 +141,21 @@ header a:link, a:visited  {
 }
 
 .review-form button {
-    width: 100%;
     outline: none;
     border: none;
     border-radius: 5px;
     background-color: #24a0ed;
     color: white;
     font-weight: bold;
-    padding: 0.3rem 0.5rem;
+    padding: 0.5rem 0.9rem;
 }
 
 .review-instructions {
     color: white;
     margin: 0; 
 	margin-bottom: 10px;
-	font-weight: 600;
+	font-weight: bolder;
+    font-size: 1.5rem;
     text-align: center;
 }
 

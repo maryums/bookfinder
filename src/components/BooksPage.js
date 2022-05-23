@@ -61,46 +61,56 @@ const BooksPage = ({ book }) => {
 
 
             <div className="review-form">
-                <h2 className="review-instructions">
+                <p className="review-instructions">
                     Read any good books lately? Leave a review!
-                </h2>
+                </p>
 
                 <form action="" name="review-form" id="review-form">
-                    <label htmlFor="name" className="sr-only">
-                        Name:
-                    </label>
-                    <input
-                        type="text"
-                        name="name"
-                        id="name"
-                        placeholder="Name"
-                        onChange={handleNameChange}
-                        value={nameInput}
-                    />
 
-                    <label htmlFor="title" className="sr-only">
-                        Book Title:
-                    </label>
-                    <input
-                        type="textarea"
-                        name="title"
-                        id="title"
-                        placeholder="Title"
-                        onChange={handleTitleChange}
-                        value={titleInput}
-                    />
+                    <div className="review-form-item">
+                        <label htmlFor="name">
+                            Name:
+                        </label>
+                        <input
+                            type="text"
+                            name="name"
+                            id="name"
+                            placeholder="Name"
+                            onChange={handleNameChange}
+                            value={nameInput}
+                        />
 
-                    <label htmlFor="review" className="sr-only">
-                        Review:
-                    </label>
-                    <input
-                        type="textarea"
-                        name="review"
-                        id="review"
-                        placeholder="This book was..."
-                        onChange={handleReviewChange}
-                        value={reviewInput}
-                    />
+                    </div>
+
+                    <div className='review-form-item'>
+                        <label htmlFor="title">
+                            Book Title:
+                        </label>
+                        <input
+                            type="textarea"
+                            name="title"
+                            id="title"
+                            placeholder="Title"
+                            onChange={handleTitleChange}
+                            value={titleInput}
+                        />
+                    </div>
+
+                    <div className='review-form-item'>
+                        <label htmlFor="review">
+                            Review:
+                        </label>
+                        <input
+                            type="textarea"
+                            name="review"
+                            id="review"
+                            placeholder="This book was..."
+                            onChange={handleReviewChange}
+                            value={reviewInput}
+                        />
+                    </div>
+
+
 
                     <button
                         onClick={handleSubmit}

@@ -10,7 +10,7 @@ const Form = () => {
 
     const [bookData, setData] = useState([])
 
-    const API_KEY = //API key goes here
+    const API_KEY = process.env.REACT_APP_FB_SECRET_KEY2
 
     const url = `https://www.googleapis.com/books/v1/volumes?q=${search}&?key=${API_KEY}&maxResults=5`
 
@@ -37,18 +37,23 @@ const Form = () => {
 
                 <div className="row2">
 
-                    <div className="search">
-                        <input type="text" placeholder="Enter Your Book Name"
-                            value={search}
-                            onChange={(e) => handleSearch(e)}
-                            onKeyPress={searchBook} />
-                        <Link to="/books">
-                            <button
-                            >
-                                <GoSearch />
-                            </button>
-                        </Link>
-                    </div>
+                    <form>
+                        <div className="search">
+                            <input
+                                type="text"
+                                placeholder="Search By Book Title"
+                                value={search}
+                                onChange={(e) => handleSearch(e)}
+                                onKeyPress={searchBook} />
+                            <Link to="/books">
+                                <button
+                                >
+                                    <GoSearch />
+                                </button>
+                            </Link>
+
+                        </div>
+                    </form>
 
                 </div>
 
