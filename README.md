@@ -12,4 +12,4 @@ React / React Router / Javascript / RESTful APIs / Firebase Realtime Database / 
 ## Overview:
 Utilizes React / React Router along with functional hooks to create a book searching/rating web applicaton. Firebase Realtime Database is used to store & display user submitted reviews and Google Books API is called with Axios to render a list of books that can be further expanded to display more in-depth information such as title, author, publisher and publishing date, along with a Google Books page link in a pop up module. 
 
- ## <a href="https://628bbe1061d209005d6e049d--extraordinary-llama-d1605d.netlify.app"> Live Preview </a>
+ ## <a href="https://628bc5c4ab6a3a0971620e19--extraordinary-llama-d1605d.netlify.app"> Live Preview </a>

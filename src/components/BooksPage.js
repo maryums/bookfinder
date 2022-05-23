@@ -50,6 +50,7 @@ const BooksPage = ({ book }) => {
         }
     };
 
+
     return (
         <div>
             {book.length > 1 &&
@@ -58,7 +59,6 @@ const BooksPage = ({ book }) => {
                     {<Card book={book} />}
                 </div>
             }
-
 
             <div className="review-form">
                 <p className="review-instructions">

@@ -14,17 +14,18 @@ const Form = () => {
 
     const url = `https://www.googleapis.com/books/v1/volumes?q=${search}&?key=${API_KEY}&maxResults=5`
 
-    const searchBook = (evt) => {
-        if (evt.key === "Enter") {
+    const searchBook = (e) => {
+        if (e.key === "Enter") {
             axios.get(url)
                 .then(res => setData(res.data.items))
                 .catch(err => console.log(err))
+            handleReset()
         }
+
     }
 
-    const handleSearch = (e) => {
-        setData('')
-        setSearch(e.target.value)
+    const handleReset = () => {
+        setSearch('')
     }
 
     return (
@@ -37,23 +38,19 @@ const Form = () => {
 
                 <div className="row2">
 
-                    <form>
-                        <div className="search">
-                            <input
-                                type="text"
-                                placeholder="Search By Book Title"
-                                value={search}
-                                onChange={(e) => handleSearch(e)}
-                                onKeyPress={searchBook} />
-                            <Link to="/books">
-                                <button
-                                >
-                                    <GoSearch />
-                                </button>
-                            </Link>
 
-                        </div>
-                    </form>
+                    <div className="search">
+                        <input type="text" placeholder="Enter Your Book Name"
+                            value={search}
+                            onChange={(e) => setSearch(e.target.value)}
+                            onKeyPress={searchBook} />
+                        <Link to="/books">
+                            <button
+                            >
+                                <GoSearch />
+                            </button>
+                        </Link>
+                    </div>
 
                 </div>
 
